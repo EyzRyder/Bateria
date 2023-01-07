@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    @apply text-[#d5c917] mb-5;
+    @apply text-[#d5c917] mb-5 text-3xl;
 }
 
 .keys {

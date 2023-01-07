@@ -532,6 +532,8 @@ body {
 
 h1 {
   margin-bottom: 1.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   --tw-text-opacity: 1;
   color: rgb(213 201 23 / var(--tw-text-opacity));
 }
