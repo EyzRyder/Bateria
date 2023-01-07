@@ -3,7 +3,7 @@ document.body.addEventListener('keyup', (event) => {
     playSound(event.code.toLowerCase());
 });
 
-// leia o que é digitado , torna ela num arry e manda para playComposition 
+// leia o que é digitado , torna ela num array e manda para playComposition 
 document.querySelector('.composer button').addEventListener('click', () => {
     let song = document.querySelector('#input').value;
 
@@ -15,12 +15,12 @@ document.querySelector('.composer button').addEventListener('click', () => {
     console.log("Música", song);
 });
 
-//tocar sons e mudar a cor do butão em especifco
+//tocar sons e mudar a cor do Butão em especifico
 function playSound(sound) {
     let audioElement = document.querySelector(`#s_${sound}`);
     let keyElement = document.querySelector(`div[data-key="${sound}"]`)
     if (audioElement) {
-        audioElement.curentTime = 0;
+        audioElement.currentTime = 0;
         audioElement.play();
     }
     if (keyElement) {

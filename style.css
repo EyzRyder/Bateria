@@ -1,69 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @apply m-0 p-0 box-border;
 }
+
 body {
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+    @apply bg-[#32051d] flex flex-col min-h-screen justify-center items-center font-[Arial,Helvetica,sans-serif];
 }
 
 h1 {
-    color: #FFF;
-    margin-bottom: 20px;
+    @apply text-[#d5c917] mb-5;
 }
+
 .keys {
-    display: grid;
+    @apply grid gap-3;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 }
+
 .key {
-    width: 80px;
-    height: 80px;
-    border: 2px solid #FFF;
-    color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: bold;
+    @apply flex justify-center items-center w-20 h-20 border-2 border-solid text-[#FF0] border-[#e7ea95] text-3xl font-bold;
 }
+
 .key.active {
-    border: 2px solid #FF0;
-    color: #FF0;
+    @apply text-[#fff] border-2 border-solid border-[#fff];
 }
 
 .composer {
-    width: 260px;
-    margin-top: 20px;
-}
-.composer #input {
-    width: 100%;
-    outline: none;
-    font-size: 17px;
-    padding: 10px 15px;
-}
-.composer button {
-    width: 100%;
-    height: 40px;
-    background: none;
-    border: 2px solid #FFF;
-    color: #FFF;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-.composer button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    @apply w-[260px] mt-5;
 }
 
-footer {
-    margin-top: 20px;
-    color: #FFF;
-    font-size: 13px;
+.composer #input {
+    @apply w-full outline-none text-lg py-3 px-4;
+}
+
+.composer button {
+    @apply w-full h-10 bg-none border-2 border-solid text-[#FF0] border-[#e7ea95] text-base mt-3 cursor-pointer hover:bg-[#00000033] hover:text-[#fff] hover:border-[#fff];
 }
