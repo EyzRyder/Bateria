@@ -5,7 +5,7 @@ document.body.addEventListener('keyup', (event) => {
 
 // leia o que é digitado , torna ela num array e manda para playComposition 
 document.querySelector('.composer button').addEventListener('click', () => {
-    let song = document.querySelector('#input').value;
+    let song = document.querySelector('#input').value.toLowerCase();
 
     if (song !== '') {
         let songArray = song.split('');
@@ -13,6 +13,14 @@ document.querySelector('.composer button').addEventListener('click', () => {
     }
 
     console.log("Música", song);
+});
+
+
+document.querySelectorAll('.keys').forEach(key => {
+    key.addEventListener('click', (e) => {
+        const keyElement = e.target.getAttribute("data-key");
+        playSound(keyElement);
+    });
 });
 
 //tocar sons e mudar a cor do Butão em especifico
